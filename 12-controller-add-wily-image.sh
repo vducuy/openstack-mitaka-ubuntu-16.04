@@ -28,6 +28,7 @@ image-create \
 --property os_command_line='root=/dev/vda1  console=ttyAMA0' \
 --property hw_cdrom_bus=virtio \
 --property kernel_id=${KERNEL_ID} \
+--property visibility=public \
 < \
 ${IMAGE_FILE}
 

@@ -21,5 +21,6 @@ glance image-create \
 --name "${KERNEL_IMAGE_NAME}" \
 --property hw_machine_type=virt \
 --property os_command_line='root=/dev/vda1  console=ttyAMA0' \
---property hw_cdrom_bus=virtio < \
+--property hw_cdrom_bus=virtio \
+--property visibility=public < \
 ${KERNEL_IMAGE_FILE}

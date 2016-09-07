@@ -30,7 +30,7 @@ openstack endpoint create --region RegionOne \
 #Install and configure components
 apt-get install nova-api nova-cert nova-conductor \
   nova-consoleauth nova-novncproxy nova-scheduler \
-  python-novaclient -y
+  python-novaclient nova-compute -y
 #Edit the /etc/nova/nova.conf file and complete the following actions
 crudini --set /etc/nova/nova.conf DEFAULT enabled_apis osapi_compute,metadata
 crudini --set /etc/nova/nova.conf api_database connection mysql+pymysql://nova:NOVA_DBPASS@controller/nova_api
